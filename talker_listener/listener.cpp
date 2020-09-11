@@ -25,16 +25,16 @@ int main(int argc, char **argv)
 
   /**
    Subscribe to the chatter topic with the master. ROS will call the chatterCallback() function 
-   whenever a new message arrives. The 2nd argument is the queue size
+   whenever a new message arrives. The 2nd argument is the queue size.
   */
   ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
 
   /**
-   * ros::spin() will enter a loop, pumping callbacks.  With this version, all
-   * callbacks will be called from within this thread (the main one).  ros::spin()
-   * will exit when Ctrl-C is pressed, or the node is shutdown by the master.
-   */
+   ros::spin() will enter a loop, pumping callbacks.  With this version, all
+   callbacks will be called from within this thread (the main one).  ros::spin()
+   will exit when Ctrl-C is pressed, or the node is shutdown by the master.
+  */
   ros::spin();
 
   return 0;
-}Subscribe to the chatter topic with the master. ROS will call the chatterCallback() function whenever a new message arrives. The 2nd argument is the queue size
+}
