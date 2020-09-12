@@ -26,7 +26,7 @@ int main(int argc, char **argv)
   /**
    Allows to specify the frequency at which to loop
    */
-  ros::Rate loop_rate(10);
+  ros::Rate loop_rate(0.5);
 
   /**
    Allows to specify the frequency at which to loop
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
     std_msgs::String msg;
 
     std::stringstream ss;
-    ss << "This is my first ROS Node" << count;
+    ss << "This is my first ROS Node " << count;
     msg.data = ss.str();
        
     ROS_INFO("%s", msg.data.c_str());
